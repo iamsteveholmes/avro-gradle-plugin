@@ -1,4 +1,4 @@
-package org.apache.avro
+package org.apache.avro.gradle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project

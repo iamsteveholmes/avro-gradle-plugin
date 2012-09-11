@@ -1,4 +1,4 @@
-package org.apache.avro
+package org.apache.avro.gradle
 
 import org.apache.avro.compiler.idl.Idl
 import org.apache.avro.compiler.idl.ParseException

@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url 'http://repository.codehaus.org/org/codehaus/groovy'
+    }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://nexus.corp.macermedia.com/nexus/content/repositories/releases")
+        }
+    }
+}
+
+dependencies {
+    compile gradleApi()
+    compile "org.apache.avro:avro-compiler:${version}"
+    groovy "org.codehaus.groovy:groovy-all:${groovyVersion}"
+}
+
+
+/*
+jar {
+    dependsOn configurations.runtime
+    from { configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } }
+}*/

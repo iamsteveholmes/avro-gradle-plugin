@@ -1,5 +1,6 @@
 package org.apache.avro.gradle
 
+import org.apache.avro.Protocol
 import org.apache.avro.compiler.idl.Idl
 import org.apache.avro.compiler.idl.ParseException
 import org.apache.avro.compiler.specific.SpecificCompiler
